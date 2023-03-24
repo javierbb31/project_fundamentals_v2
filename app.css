@@ -1,0 +1,466 @@
+/*reglas generales*/
+
+/*Media Query*/
+
+/** Reescribir colores */
+
+/** Productos */
+
+/*reglas generales*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:ital,wght@0,100;1,100&display=swap');
+
+
+html{
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 62.5;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header{
+    width: 98%;
+    height: 70px;
+    background: #c2e2f4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 120px;
+    margin-top: 8px;
+}
+
+nav .logo{
+    display: none;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li a{
+    color: #212526;
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background: white;
+}
+
+nav ul li a.active{
+    background: #675cff;
+    color: #fff;
+}
+
+.hamburger{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.hamburger:hover{
+    background: #f6f4ff;
+}
+
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #212526;
+}
+
+@media only screen and (max-width: 1100px) {
+    header{
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    nav {
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #c2e2f4;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    #nav_check:checked ~ nav{
+        left: 0;
+    }
+
+    nav .log{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav ul{
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:1400px) {
+    .hero{
+        width: 100%;
+        border: 2px solid;
+    }
+}
+
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 4rem;
+}
+
+#muebles{
+    color: #037BC0;
+}
+
+.hero {
+    font-family: Playfair;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border: 0px solid;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.container-images{
+  margin: 0 auto;
+  width:100%;
+  height: 180vh;
+  display:grid;
+  grid-template-columns: repeat(11, 1fr) ;
+  grid-gap: 10px;
+  padding: 5px;
+}
+
+.imageOne:hover {
+    opacity: 0.8;
+    transform: scale(1.1); 
+}
+
+
+.imageTwo:hover {
+    opacity: 0.8;
+    transform: scale(1.1); 
+}
+
+.imageThree:hover {
+    opacity: 0.8;
+    transform: scale(1.1); 
+}
+
+.imageFour:hover {
+    opacity: 0.8;
+    transform: scale(1.1); 
+}
+
+.imageFive:hover {
+    opacity: 0.8;
+    transform: scale(1.1); 
+}
+
+.imageSix:hover {
+    opacity: 0.8;
+    transform: scale(1.1); 
+}
+  
+  .container:hover .middle {
+    opacity: 1;
+    transform: scale(1.1); 
+  }
+
+.imageOne{
+  grid-column: 1 / 7;
+  order: 1;
+  background-image:url('producto1.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+  padding-right: 0px;
+  margin-bottom: 25px;
+
+}
+
+.content{
+    grid-column: 7 / 12;
+    order: 2;
+    background-color: #037BC0;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    background-position:center;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    border-style: double;
+    
+}
+
+.imageTwo{
+  grid-column:1 / 7;
+  order: 3;
+  background-image:url('producto2.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.img2-content{
+    grid-column:1 / 7;
+    order: 5;
+    background-color: #037BC0;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: white;
+    text-align: center;
+    max-height: 350px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-style: double;
+}
+
+.img3-content{
+    grid-column: 7 / 12;
+    order: 6;
+    background-color: #037BC0;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-height: 350px;
+    border-style: double;
+}
+
+.imageThree{
+  grid-column: 7 / 12;
+  order: 4;
+  background-image:url('producto3.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.imageFour{
+  grid-column:1 / 5;
+  order: 7;
+  background-image:url('producto4.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+  padding-top:0;
+}
+
+.imageFive{
+    grid-column: 5 / 9;
+    order: 8;
+    background-image:url('producto5.jpg');
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    background-position:center;
+    padding-top:0;
+  }
+
+.imageSix{
+    grid-column:9 / 12;
+    order:9;
+    background-image:url('producto6.jpg');
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    background-position:center;
+}
+
+.img4-content{
+    grid-column: 1/5;
+    order: 10;
+    background-color: #037BC0;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: white;
+    max-height: 300px;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-style: double;
+}
+
+.img5-content{
+    grid-column: 5/9;
+    order: 11;
+    background-color: #037BC0;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: white;
+    max-height: 300px;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-style: double;
+}
+
+
+.img6-content{
+    grid-column: 9/12;
+    order: 12;
+    background-color: #037BC0;
+    background-repeat:no-repeat;
+    background-position:center;
+    max-height: 300px;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-style: double;
+}
+
+
+@media screen and (max-width:700px) {
+    button{
+        size: 15px;
+    }
+
+    .hero{
+        display: none;
+    }
+
+    .imageOne{
+        grid-column: 1 / span 12;
+        grid-row: 1 /2;
+        background-size: 100% 100%;
+    }
+
+    .content{
+        grid-column: 1 / span 12;
+        grid-row: 2 /3;
+        background-size: 100% 100%;
+    }
+
+    .imageTwo{
+        grid-column: 1 / span 12;
+        grid-row: 3 /4;
+    }
+
+    .img2-content{
+        grid-column: 1 / span 12;
+        grid-row: 4 /5;
+    }
+    
+    .imageThree{
+        grid-column: 1 / span 12;
+        grid-row: 5 /6;
+    }
+    
+    .img3-content{
+        grid-column: 1 / span 12;
+        grid-row: 6 /7;
+    }
+    
+    .imageFour{
+        grid-column: 1 / span 12;
+        grid-row: 7 /8;
+    }
+    
+    .img4-content{
+        grid-column: 1 / span 12;
+        grid-row: 8 /9;
+    } 
+    
+    .imageFive{
+        grid-column: 1 / span 12;
+        grid-row: 9 /10;
+    } 
+    
+    .img5-content{
+        grid-column: 1 / span 12;
+        grid-row: 10 /11;
+    } 
+    
+    .imageSix{
+        grid-column: 1 / span 12;
+        grid-row: 11 /12;
+    } 
+    
+    .img6-content{
+        grid-column: 1 / span 12;
+        grid-row: 12 /13;
+    }
+
+    .categorias-section{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .container-images{
+        grid-template-rows: repeat(14, 300px);
+    }
+
+}
